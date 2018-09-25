@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" v="4.2.1" rws="_150793089949758" cws="_150793089949758" sm="false" xs="false" id="_150793089943514" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" compositePrimaryKeyClass="PersonaPK" abs="false" class="Persona" v="true" m="false" rootElement="_150793089943514" id="_150793089943515">
+        <jpa:ts e="true"/>
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nombres" id="_150793089943522">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="nombres" unique="false" nullable="false" insertable="true" updatable="true" table="persona" length="100"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="apellidos" id="_150793089943523">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="apellidos" unique="false" nullable="false" insertable="true" updatable="true" table="persona" length="100"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="sexo" id="_150793089943524">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="sexo" unique="false" nullable="false" insertable="true" updatable="true" table="persona" length="2"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="fechaNacimiento" id="_150793089943525">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+                <jpa:column name="fechaNacimiento" unique="false" nullable="false" insertable="true" updatable="true" table="persona"/>
+            </jpa:basic>
+            <jpa:one-to-many own="false" collection-type="java.util.List" connected-entity-id="_150793089943519" connected-attribute-id="_150793089943549" v="true" name="telefonoCollection" id="_150793089943527">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-many>
+            <jpa:one-to-many own="false" collection-type="java.util.List" connected-entity-id="_150793089943520" connected-attribute-id="_150793089943557" v="true" name="notaCollection" id="_150793089943528">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-many>
+            <jpa:one-to-one own="true" primaryKey="false" connected-entity-id="_150793089943517" connected-attribute-id="_150793089943538" v="true" name="usuario" id="_150793089943526">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="Integer" v="true" name="codigo" id="_150793089943521">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="codigo" unique="false" nullable="false" insertable="true" updatable="true" table="persona"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:el/>
+        <jpa:table name="persona"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="CategoriaPK" abs="false" class="Categoria" v="true" m="false" rootElement="_150793089943514" id="_150793089943516">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nombre" id="_150793089943530">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="nombre" unique="false" nullable="false" insertable="true" updatable="true" table="categoria" length="50"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="boolean" v="true" name="estado" id="_150793089943531">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="estado" unique="false" nullable="false" insertable="true" updatable="true" table="categoria"/>
+            </jpa:basic>
+            <jpa:one-to-many own="false" collection-type="java.util.List" connected-entity-id="_150793089943520" connected-attribute-id="_150793089943556" v="true" name="notaCollection" id="_150793089943532">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Integer" v="true" name="codigo" id="_150793089943529">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="codigo" unique="false" nullable="false" insertable="true" updatable="true" table="categoria"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="categoria"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="UsuarioPK" abs="false" class="Usuario" v="true" m="false" rootElement="_150793089943514" id="_150793089943517">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="usuario" id="_150793089943534">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="usuario" unique="false" nullable="false" insertable="true" updatable="true" table="usuario" length="20"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="clave" id="_150793089943535">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="clave" unique="false" nullable="false" insertable="true" updatable="true" table="usuario" length="40"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="tipo" id="_150793089943536">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="tipo" unique="false" nullable="false" insertable="true" updatable="true" table="usuario" length="2"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="boolean" v="true" name="estado" id="_150793089943537">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="estado" unique="false" nullable="false" insertable="true" updatable="true" table="usuario"/>
+            </jpa:basic>
+            <jpa:one-to-one optional="false" primaryKey="false" connected-entity-id="_150793089943515" connected-attribute-id="_150793089943526" v="true" name="persona" id="_150793089943538">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:join-column name="CODIGO" rc="CODIGO" unique="false" nullable="true" insertable="false" updatable="false"/>
+            </jpa:one-to-one>
+            <jpa:id attribute-type="Integer" v="true" name="codigo" id="_150793089943533">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="codigo" unique="false" nullable="false" insertable="true" updatable="true" table="usuario"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="usuario"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="MenuPK" abs="false" class="Menu" v="true" m="false" rootElement="_150793089943514" id="_150793089943518">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="nombre" id="_150793089943540">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="nombre" unique="false" nullable="false" insertable="true" updatable="true" table="menu" length="50"/>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="url" id="_150793089943541">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="url" unique="false" nullable="true" insertable="true" updatable="true" table="menu" length="100"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="tipo" id="_150793089943542">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="tipo" unique="false" nullable="false" insertable="true" updatable="true" table="menu" length="2"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="tipoUsuario" id="_150793089943543">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="tipoUsuario" unique="false" nullable="false" insertable="true" updatable="true" table="menu" length="2"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="boolean" v="true" name="estado" id="_150793089943544">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="estado" unique="false" nullable="false" insertable="true" updatable="true" table="menu"/>
+            </jpa:basic>
+            <jpa:many-to-one primaryKey="false" connected-entity-id="_150793089943518" connected-attribute-id="_150793089943545" v="true" name="codigoSubmenu" id="_150793089943546">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:join-column name="CODIGO_SUBMENU" rc="CODIGO" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:many-to-one>
+            <jpa:one-to-many own="false" collection-type="java.util.List" connected-entity-id="_150793089943518" connected-attribute-id="_150793089943546" v="true" name="menuCollection" id="_150793089943545">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Short" v="true" name="codigo" id="_150793089943539">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="codigo" unique="false" nullable="false" insertable="true" updatable="true" table="menu"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="menu"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="TelefonoPK" abs="false" class="Telefono" v="true" m="false" rootElement="_150793089943514" id="_150793089943519">
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="numero" id="_150793089943548">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="numero" unique="false" nullable="false" insertable="true" updatable="true" table="telefono" length="9"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_150793089943515" connected-attribute-id="_150793089943527" v="true" name="codigoPersona" id="_150793089943549">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:join-column name="CODIGO_PERSONA" rc="CODIGO" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Integer" v="true" name="codigo" id="_150793089943547">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="codigo" unique="false" nullable="false" insertable="true" updatable="true" table="telefono"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="telefono"/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="NotaPK" abs="false" class="Nota" v="true" m="false" rootElement="_150793089943514" id="_150793089943520">
+        <jpa:ts e="true"/>
+        <jpa:attributes>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="encabezado" id="_150793089943551">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="encabezado" unique="false" nullable="false" insertable="true" updatable="true" table="nota" length="50"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="String" v="true" name="cuerpo" id="_150793089943552">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="cuerpo" unique="false" nullable="false" insertable="true" updatable="true" table="nota" length="500"/>
+            </jpa:basic>
+            <jpa:basic optional="false" attribute-type="java.util.Date" v="true" name="fecha" id="_150793089943553">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:temporal>TIMESTAMP</jpa:temporal>
+                <jpa:column name="fecha" unique="false" nullable="false" insertable="true" updatable="true" table="nota"/>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="comentarioAdmin" id="_150793089943554">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="comentarioAdmin" unique="false" nullable="true" insertable="true" updatable="true" table="nota" length="50"/>
+            </jpa:basic>
+            <jpa:basic optional="true" attribute-type="String" v="true" name="valorizacion" id="_150793089943555">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="valorizacion" unique="false" nullable="true" insertable="true" updatable="true" table="nota" length="2"/>
+            </jpa:basic>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_150793089943516" connected-attribute-id="_150793089943532" v="true" name="codigoCategoria" id="_150793089943556">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:join-column name="CODIGO_CATEGORIA" rc="CODIGO" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:many-to-one>
+            <jpa:many-to-one optional="false" primaryKey="false" connected-entity-id="_150793089943515" connected-attribute-id="_150793089943528" v="true" name="codigoPersona" id="_150793089943557">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:join-column name="CODIGO_PERSONA" rc="CODIGO" unique="false" nullable="true" insertable="true" updatable="true"/>
+            </jpa:many-to-one>
+            <jpa:id attribute-type="Integer" v="true" name="codigo" id="_150793089943550">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:column name="codigo" unique="false" nullable="false" insertable="true" updatable="true" table="nota"/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:el/>
+        <jpa:table name="nota"/>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:c>
+        <db u="jdbc:mysql://localhost:3306/agenda" n="root" p="Sql2015" d="com.mysql.jdbc.Driver"/>
+    </jpa:c>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_150793089949758">
+            <i ref="_150793089943519" x="679" y="622">
+                <el/>
+            </i>
+            <i ref="_150793089943518" x="888" y="327">
+                <el/>
+            </i>
+            <i ref="_150793089943517" x="247" y="622">
+                <el/>
+            </i>
+            <i ref="_150793089943516" x="32" y="327">
+                <el/>
+            </i>
+            <i ref="_150793089943515" x="459" y="327">
+                <el/>
+            </i>
+            <i ref="_150793089943520" x="247" y="32">
+                <el/>
+            </i>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>
